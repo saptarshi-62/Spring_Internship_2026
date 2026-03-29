@@ -15,9 +15,3 @@ data/interim/*
 !data/interim/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
-
-reports/figures/eda/**/*.png
-reports/figures/eda/**/*.jpg
-reports/figures/eda/**/*.jpeg
-reports/figures/eda/**/*.pdf
-reports/figures/eda/**/*.svg
