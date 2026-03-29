@@ -54,7 +54,6 @@
   "duplicates_removed": 13,
   "outputs": {
     "cleaned": "/Users/samyabrataroy/Downloads/Spring_Internship_2026/data/interim/ILPD_cleaned.csv",
-    "outlier_report": "/Users/samyabrataroy/Downloads/Spring_Internship_2026/produced_reports/docs/ILPD_outlier_report.csv",
     "clinically_capped": "/Users/samyabrataroy/Downloads/Spring_Internship_2026/data/processed/ILPD_clinically_capped.csv",
     "robust_scaled_features": "/Users/samyabrataroy/Downloads/Spring_Internship_2026/data/processed/ILPD_robust_scaled_features.csv"
   }
