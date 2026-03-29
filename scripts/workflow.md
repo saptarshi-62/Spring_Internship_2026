@@ -79,3 +79,10 @@ This file summarizes the workflow and outputs of each notebook in `scripts/`.
   - `produced_reports/docs/ILPD_outlier_report.csv`
 - KDE figures:
   - `produced_reports/figures/eda/outliers/kde_<feature>.png`
+
+
+---
+
+## HTML export
+
+Each notebook includes a final cell that converts itself to HTML and writes output to `produced_reports/html/`.
