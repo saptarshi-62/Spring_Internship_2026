@@ -1,36 +1,61 @@
-# Spring_Internship_2026
+# Spring_Internship_2026 - IDEAS TIH, ISI Kolkata
 
-# Uncertainty-Aware Disease Risk Prediction Under Noisy and Outlier-Rich Medical Data
+# Uncertainty-Aware Liver Cirrhosis Classification under Noisy and Outlier-Rich Clinical Data
 
 ## Overview
-This project focuses on building robust deep learning models for disease risk prediction under noisy and outlier-rich medical data conditions. Beyond predictive performance, the primary objective is to evaluate model reliability and confidence using uncertainty estimation techniques.
+
+This project studies liver disease classification under noisy, incomplete, and outlier-rich clinical data conditions using the Indian Liver Patient Dataset (ILPD). The broader research goal is to understand not only predictive performance, but also robustness and trustworthiness when the data is imperfect.
 
 ## Problem Statement
-Medical datasets often contain noise, missing values, and outliers that significantly affect model reliability. This project investigates how uncertainty-aware deep learning methods can improve trustworthiness and robustness in disease risk prediction systems.
 
-## Datasets
-We will work with secondary datasets collected from credible and recognized sources such as:
+Clinical datasets are rarely clean. Measurement errors, missing values, and implausible observations can distort downstream model behavior. This work explores how such imperfections affect liver disease prediction and how uncertainty-aware methods can support more reliable analysis under real-world conditions.
 
-- Indian Liver Patient Dataset (ILPD)  
-- MIDAS Medical Imaging Datasets  
-- AIKosh Healthcare Data  
+## Research Focus
 
-The final disease focus will be determined after evaluating dataset feasibility and relevance.
+The project currently focuses on:
+
+- data preprocessing and validation
+- outlier analysis
+- exploratory data analysis
+- controlled synthetic noise generation
+- robust downstream modeling under degraded data conditions
+
+## Dataset
+
+This project uses the **Indian Liver Patient Dataset (ILPD)** from the UCI Machine Learning Repository:
+
+https://archive.ics.uci.edu/dataset/225/ilpd+indian+liver+patient+dataset
+
+The dataset contains clinical and pathological attributes such as bilirubin levels, enzyme measurements, and protein indicators, which are used to study liver disease classification.
 
 ## Objectives
-- Develop deep learning models for disease risk prediction  
-- Introduce controlled noise and outlier conditions  
-- Evaluate robustness and calibration under noisy scenarios  
+
+- Develop classification models for liver disease prediction
+- Introduce controlled noise and outlier conditions into clinical data
+- Evaluate model robustness under degraded data conditions
+- Analyze prediction stability and consistency
+- Incorporate uncertainty estimation to assess model confidence
 
 ## Team
+
 - Ayushi Mitra
 - Sonu Shaw
 - Anshuman Ray
 - Saptarshi Dey
-- Farhan Gazi
 
 ## Timeline
-Project Deadline: <31 March 2026>
 
-## License
-This project is licensed under the MIT License.
+Project Deadline: 31 March 2026
+
+## Citation and Contact
+
+If you use this work, please provide appropriate credit to the authors.
+
+For queries, collaboration, or further usage of the project artifacts, please contact:
+
+- Ayushi Mitra
+- Saptarshi Dey
+- Sonu Shaw
+- Anshuman Ray
+
+This project was developed under the Spring Internship 2026 program at IDEAS TIH, Indian Statistical Institute, Kolkata.

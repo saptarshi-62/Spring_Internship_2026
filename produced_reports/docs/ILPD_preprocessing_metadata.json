@@ -1,0 +1,60 @@
+{
+  "input": "/Users/samyabrataroy/Downloads/Spring_Internship_2026/data/raw/ILPD.csv",
+  "rows_raw": 583,
+  "rows_cleaned": 570,
+  "columns": [
+    "Age",
+    "Gender",
+    "Total_Bilirubin",
+    "Direct_Bilirubin",
+    "Alkaline_Phosphotase",
+    "Alamine_Aminotransferase",
+    "Aspartate_Aminotransferase",
+    "Total_Proteins",
+    "Albumin",
+    "Albumin_and_Globulin_Ratio",
+    "Result"
+  ],
+  "missing_before": {
+    "Age": 0,
+    "Gender": 0,
+    "Total_Bilirubin": 0,
+    "Direct_Bilirubin": 0,
+    "Alkaline_Phosphotase": 0,
+    "Alamine_Aminotransferase": 0,
+    "Aspartate_Aminotransferase": 0,
+    "Total_Proteins": 0,
+    "Albumin": 0,
+    "Albumin_and_Globulin_Ratio": 4,
+    "Result": 0
+  },
+  "missing_after": {
+    "Age": 0,
+    "Gender": 0,
+    "Total_Bilirubin": 0,
+    "Direct_Bilirubin": 0,
+    "Alkaline_Phosphotase": 0,
+    "Alamine_Aminotransferase": 0,
+    "Aspartate_Aminotransferase": 0,
+    "Total_Proteins": 0,
+    "Albumin": 0,
+    "Albumin_and_Globulin_Ratio": 0,
+    "Result": 0
+  },
+  "imputation_strategy": "group_median_by_gender_with_global_fallback",
+  "invalid_checks": {
+    "Age_negative": 0,
+    "Age_too_high": 0,
+    "Bilirubin_negative": 0,
+    "Proteins_negative": 0,
+    "Albumin_negative": 0,
+    "AG_ratio_negative": 0,
+    "Infinite_numeric_values": 0
+  },
+  "duplicates_removed": 13,
+  "outputs": {
+    "cleaned": "/Users/samyabrataroy/Downloads/Spring_Internship_2026/data/interim/ILPD_cleaned.csv",
+    "clinically_capped": "/Users/samyabrataroy/Downloads/Spring_Internship_2026/data/processed/ILPD_clinically_capped.csv",
+    "robust_scaled_features": "/Users/samyabrataroy/Downloads/Spring_Internship_2026/data/processed/ILPD_robust_scaled_features.csv"
+  }
+}

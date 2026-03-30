@@ -1,0 +1,10 @@
+feature,rows,iqr_outliers,iqr_pct,zscore_outliers,zscore_pct,modified_z_outliers,modified_z_pct
+Total_Bilirubin,570,83,14.56,17,2.98,145,25.44
+Direct_Bilirubin,570,80,14.04,19,3.33,133,23.33
+Alamine_Aminotransferase,570,72,12.63,10,1.75,74,12.98
+Alkaline_Phosphotase,570,69,12.11,14,2.46,72,12.63
+Aspartate_Aminotransferase,570,66,11.58,6,1.05,80,14.04
+Albumin_and_Globulin_Ratio,570,10,1.75,3,0.53,9,1.58
+Total_Proteins,570,8,1.4,3,0.53,2,0.35
+Age,570,0,0.0,0,0.0,0,0.0
+Albumin,570,0,0.0,0,0.0,0,0.0

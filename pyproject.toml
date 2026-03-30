@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "spring-internship-2026-liver-analysis"
+version = "0.1.0"
+description = "Notebook-first analysis workflow for liver disease classification under noisy and outlier-rich clinical data."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "ipykernel>=6.29",
+  "jupyterlab>=4.4",
+  "matplotlib>=3.9",
+  "nbformat>=5.10",
+  "numpy>=2.0",
+  "pandas>=2.2",
+  "scikit-learn>=1.6",
+  "scipy>=1.14",
+  "seaborn>=0.13",
+]
+
+[tool.spring_internship.paths]
+raw_data = "data/raw/ILPD.csv"
+interim_data_dir = "data/interim"
+processed_data_dir = "data/processed"
+notebooks_dir = "legacy_notebooks"
+scripts_dir = "scripts"
+reports_dir = "produced_reports"
+eda_notebook = "scripts/01_eda_univariate_bivariate.ipynb"
+outlier_notebook = "scripts/02_outlier_handling.ipynb"
+preprocessing_notebook = "scripts/03_preprocessing_pipeline.ipynb"
+eda_figure_dir = "produced_reports/figures/eda"
+
+[tool.spring_internship.notebooks]
+legacy_preprocessing = "legacy_notebooks/01_data_preprocessing_and_outlier_handling.ipynb"
+legacy_augmentation = "legacy_notebooks/02_noise_augmentation_by_gender.ipynb"
+legacy_modeling = "legacy_notebooks/03_modeling_and_paper_notes.ipynb"
+eda = "scripts/01_eda_univariate_bivariate.ipynb"
+outlier_handling = "scripts/02_outlier_handling.ipynb"
+preprocessing = "scripts/03_preprocessing_pipeline.ipynb"
