@@ -8,6 +8,7 @@ This file summarizes the active notebooks in `scripts/`, their outputs, and thei
 - `02_outlier_handling.ipynb`
 - `03_preprocessing_pipeline.ipynb`
 - `04_noise_generation_gmm.ipynb`
+- `05_model_building_pipeline.ipynb`
 
 ## Dependency note
 
@@ -17,6 +18,7 @@ The notebook numbering matches the current filename convention, but the actual d
 2. `02_outlier_handling.ipynb` depends on `data/interim/ILPD_cleaned.csv`.
 3. `04_noise_generation_gmm.ipynb` depends on `data/processed/ILPD_robust_scaled_features.csv`.
 4. `01_eda_univariate_bivariate.ipynb` reads the raw dataset and can be run independently for exploratory work.
+5. `05_model_building_pipeline.ipynb` consumes dataset variants from `data/` and compares reusable model configurations through a single evaluation harness.
 
 ## 1) `01_eda_univariate_bivariate.ipynb`
 
@@ -119,6 +121,42 @@ The notebook numbering matches the current filename convention, but the actual d
 - `data/processed/ILPD_robust_scaled_with_gmm_noise.csv`
 - `produced_reports/docs/ILPD_noise_generation_summary.json`
 - `produced_reports/04_noise_generation_gmm.html`
+
+---
+
+## 5) `05_model_building_pipeline.ipynb`
+
+### Workflow
+
+1. Resolve the repo root and keep the workflow self-contained inside the notebook.
+2. Manually set `DATASET_NAME` in the dataset-selection cell:
+   - `raw`
+   - `cleaned`
+   - `clinically_capped`
+   - `robust_scaled`
+   - `gmm_augmented`
+3. Map `DATASET_NAME` to its dataset path under `data/` plus the execution settings (`random_state`, `test_size`, `cv_splits`).
+4. Load the selected dataset, standardize the schema, and split train/test once.
+5. Use `imbalanced-learn` only when `DATASET_NAME == "raw"`; other dataset modes stay scikit-learn only.
+6. Run the unified model evaluation harness across the selected dataset using the same model catalog:
+   - Logistic Regression
+   - Random Forest
+   - HistGradientBoosting
+   - BaggingClassifier with a balanced decision-tree base learner
+   - StackingClassifier with Logistic Regression + Random Forest
+7. Generate code-driven tables for:
+   - dataset overview
+   - full ranked model performance summary
+   - best model row
+
+### Output
+
+- In-notebook tables:
+  - `DATASET_SUMMARY`
+  - `FINAL_MODEL_PERFORMANCE_SUMMARY`
+- `BEST_MODEL`
+- HTML export:
+  - `produced_reports/05_model_building_pipeline_<dataset_name>data.html`
 
 ## Notes
 

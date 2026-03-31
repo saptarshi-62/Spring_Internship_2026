@@ -9,6 +9,7 @@ description = "Notebook-first analysis workflow for liver disease classification
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+  "imbalanced-learn>=0.13",
   "ipykernel>=6.29",
   "jupyterlab>=4.4",
   "matplotlib>=3.9",
@@ -39,3 +40,4 @@ legacy_modeling = "legacy_notebooks/03_modeling_and_paper_notes.ipynb"
 eda = "scripts/01_eda_univariate_bivariate.ipynb"
 outlier_handling = "scripts/02_outlier_handling.ipynb"
 preprocessing = "scripts/03_preprocessing_pipeline.ipynb"
+model_building = "scripts/05_model_building_pipeline.ipynb"
